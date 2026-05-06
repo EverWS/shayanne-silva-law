@@ -34,7 +34,7 @@ export const Navbar = () => {
         <a href="#inicio" className="flex items-center gap-3" aria-label="Página inicial">
           <img src={logo} alt="Logotipo Shayanne Silva Advogada" className="h-12 w-12 md:h-14 md:w-14 object-contain" />
           <div className="hidden sm:block leading-tight">
-            <p className="font-serif text-lg md:text-xl tracking-wide text-foreground">Shayanne Silva</p>
+            <p className={`font-serif text-lg md:text-xl tracking-wide transition-colors duration-500 ${scrolled ? "text-foreground" : "text-white"}`}>Shayanne Silva</p>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] text-gold">Advogada</p>
           </div>
         </a>
@@ -44,7 +44,7 @@ export const Navbar = () => {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm uppercase tracking-wider text-foreground/80 hover:text-gold transition-colors duration-300 relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-gold after:transition-all hover:after:w-full"
+                className={`text-sm uppercase tracking-wider transition-colors duration-300 hover:text-gold relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-gold after:transition-all hover:after:w-full ${scrolled ? "text-foreground/80" : "text-white"}`}
               >
                 {l.label}
               </a>
@@ -54,14 +54,14 @@ export const Navbar = () => {
 
         <a
           href="#contato"
-          className="hidden lg:inline-flex items-center px-6 py-2.5 text-xs uppercase tracking-[0.2em] border border-gold text-foreground hover:bg-gold hover:text-primary transition-all duration-500"
+          className={`hidden lg:inline-flex items-center px-6 py-2.5 text-xs uppercase tracking-[0.2em] border border-gold transition-all duration-500 hover:bg-gold hover:text-primary ${scrolled ? "text-foreground" : "text-white"}`}
         >
           Agendar Consulta
         </a>
 
         <button
           aria-label="Abrir menu"
-          className="lg:hidden p-2 text-foreground"
+          className={`lg:hidden p-2 transition-colors ${scrolled ? "text-foreground" : "text-white"}`}
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
