@@ -11,10 +11,10 @@ export const About = () => {
             <img
               src={portrait}
               alt="Dra. Shayanne Silva, advogada"
-              width={1024}
-              height={1280}
+              width={1684}
+              height={2528}
               loading="lazy"
-              className="w-full h-[520px] md:h-[640px] object-cover shadow-elegant"
+              className="w-full max-w-[420px] mx-auto aspect-[2/3] object-cover shadow-elegant"
             />
             <div className="absolute -bottom-6 -right-2 md:-right-6 bg-gradient-gold p-6 md:p-8 max-w-[220px] shadow-gold">
               <p className="font-serif text-3xl md:text-4xl text-primary">+10</p>
