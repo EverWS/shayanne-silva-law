@@ -1,4 +1,4 @@
-import portrait from "@/assets/lawyer-portrait.jpg";
+import portrait from "@/assets/foto_profissional.jpg";
 import { Reveal } from "./Reveal";
 
 export const About = () => {
